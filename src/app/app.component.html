@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <button (click)="getPosts()">get posts</button>
+</div>
+<h2>Here are some links to help you start: </h2>
+
+<select [(ngModel)]="selectedPost" (change)="getOthers()">
+  <option *ngFor="let post of posts" value= {{post.id}}>
+    {{post.title}}
+  </option>
+</select>
+
+<select [(ngModel)]="selectedComment">
+  <option *ngFor="let comment of comments" value= {{comment.id}}>
+    {{comment.name}}
+  </option>
+</select>
+
