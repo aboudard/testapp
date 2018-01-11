@@ -20,12 +20,14 @@ export class AppComponent {
   getPosts(): void {
     this.dataService.getPosts().subscribe(posts => {
       this.posts = posts;
+      delete this.selectedPost;
     });
   }
 
   getOthers(): void {
     this.dataService.getComments().subscribe(comments => {
       this.comments = comments;
+      delete this.selectedComment;
     });
   }
 
